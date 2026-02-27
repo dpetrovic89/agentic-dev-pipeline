@@ -1,0 +1,38 @@
+[project]
+name = "agentic-dev-pipeline"
+version = "0.1.0"
+description = "Automated software development lifecycle using a multi-agent system."
+dependencies = [
+    "crewai>=0.70",
+    "crewai-tools",
+    "langgraph>=0.2",
+    "langchain-anthropic",
+    "pydantic-settings",
+    "GitPython",
+    "asana",
+    "slack-bolt",
+    "pytest-cov"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "ruff"
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E", "F", "I", "W", "B", "C90", "N", "UP", "ANN", "S", "PT", "RET", "SIM", "ARG", "PTH", "RUF"]
+ignore = ["ANN101", "ANN102", "S101", "S104", "ANN001", "ANN201", "ANN202"]
+
+[tool.ruff.mccabe]
+max-complexity = 10
+
+[tool.ruff.per-file-ignores]
+"tests/*" = ["S101", "ANN"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
