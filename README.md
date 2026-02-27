@@ -2,6 +2,9 @@
 
 **Automate your software development lifecycle with multi-agent orchestration.**
 
+# Idea from Boris Cherny (Claude code creator): https://x.com/rvivek/status/2026385957596111044
+
+
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-orange)](https://github.com/langchain-ai/langgraph)
